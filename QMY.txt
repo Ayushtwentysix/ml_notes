@@ -1,0 +1,59 @@
+[https://www.analyticsvidhya.com/blog/2017/06/a-comprehensive-guide-for-linear-ridge-and-lasso-regression/]
+
+y=mx+c 
+		y grows m times x, means y grows 2x  wrt to x if m=2. 
+		If we change slope, we are changing the sensitivity of y.
+		steeper slope: y grows much more faster
+		
+objectives of Linear Regression:  Relationships, Forecast
+Linear Regression tries to minimize the difference b/w the straight line and real values of X,y. This diff is error.
+
+confidence interval: 
+		it is very time consuming and expensive to get all the population data, so for this we take samples.
+		But for each sample, we will have different m & c.
+		to Solve this: we take a random m & c, generate confidence interval.
+			we are never certain in data analysis, so we will take 95% confidence interval
+			
+Statistically significant relationships:
+		if m is not equal to zero in 95% confidence interval, R is significant.
+		Null hypothesis: we assume that 0 is not a slope in 95% CI, and reject it then by showing plots.
+
+P value:
+			p < 5% (0.05) 
+			probability of no relationship(contains m=0) 
+			tells probability of we reject null hypothesis when it is acttualy true.
+			
+Model Fit:
+		we measure model fit by comparing variance of what we know relative to variance we cant explain.
+		
+											R2 (y=mx+c+E) :
+													tells how much variance in y is explained by mx.  We aslo have  E, dont help here.
+													used to calculate accuracy of the model
+													0< R2: Var(mx)/Var(y) <1  
+													R2~0: no explain     R2~1: explain everything
+													R2 decreses, actual data moves away from st. line
+													
+											Regression Standard Error(RSE) :
+													tells variance of error in variance of y
+													MINIMIZE  it.
+													var(E) is estimated by standard deviation of E term.
+													always choose model with smallest  RSE
+													type: OLS(ordinary least square): 	
+																	MINIMIZE sum of squares of errors(residuals)
+
+Forecasting:
+				with the given data of 40 families, can we identify  the consumption of 41st family?
+				make 95% confidence interval of consumption for a particular value of income.	
+				NEVER report a point forecast, always report CI.
+				
+Categoricial independent variable:
+			gender: M/F   
+			Qualification: b.tech/m.tech/Phd
+			rank: <10 , <20, <30                                                      Why we put rank as category, if i can show the exact values of rank corresponding to each salary? 
+			
+Regularization:  
+			reduce the magnitude of coefficients in our model
+			suppose after fitting a linear model , we see that  independent variable  have a high variance in y, and we just want to reduce that. We do this by Regularization.
+			lets say dominoes want to close some high profit shops due to any reason (Govt, Blast etc), and loc. has stragic relationship with sales. So in this case they shift the shop, 
+			loc. effect will reduce. this is  what we want.
+		
