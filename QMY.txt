@@ -26,19 +26,19 @@ P value:
 Model Fit:
 		we measure model fit by comparing variance of what we know relative to variance we cant explain.
 		
-											R2 (y=mx+c+E) :
-													tells how much variance in y is explained by mx.  We aslo have  E, dont help here.
-													used to calculate accuracy of the model
-													0< R2: Var(mx)/Var(y) <1  
-													R2~0: no explain     R2~1: explain everything
-													R2 decreses, actual data moves away from st. line
+		 R2 (y=mx+c+E) :
+		        tells how much variance in y is explained by mx.  We aslo have  E, dont help here.
+			used to calculate accuracy of the model
+			0< R2: Var(mx)/Var(y) <1  
+		        R2~0: no explain     R2~1: explain everything
+			R2 decreses, actual data moves away from st. line
 													
-											Regression Standard Error(RSE) :
-													tells variance of error in variance of y
-													MINIMIZE  it.
-													var(E) is estimated by standard deviation of E term.
-													always choose model with smallest  RSE
-													type: OLS(ordinary least square): 	
+		Regression Standard Error(RSE) :
+			tells variance of error in variance of y
+			MINIMIZE  it.
+		        var(E) is estimated by standard deviation of E term.
+		        always choose model with smallest  RSE
+			type: OLS(ordinary least square): 	
 																	MINIMIZE sum of squares of errors(residuals)
 
 Forecasting:
@@ -49,7 +49,9 @@ Forecasting:
 Categoricial independent variable:
 			gender: M/F   
 			Qualification: b.tech/m.tech/Phd
-			rank: <10 , <20, <30                                                      Why we put rank as category, if i can show the exact values of rank corresponding to each salary? 
+			rank: <10 , <20, <30         
+                        
+                        Why we put rank as category, if i can show the exact values of rank corresponding to each salary? 
 			
 Regularization:  
 			reduce the magnitude of coefficients in our model
